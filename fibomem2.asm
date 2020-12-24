@@ -64,6 +64,7 @@ MAIN PROC FAR
 		SUB ECX, 1
 		CALL far ptr fib
 		CALL far ptr sum_two_mem
+		RET
 
 		fib1:
 			MOV ECX, 1
