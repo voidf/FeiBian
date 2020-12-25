@@ -22,7 +22,7 @@
 
 ![](fibomem2.png)
 
-以上代码均已在vscode的汇编一键包即`xsro.masm-tasm`扩展程序下测试通过
+以上代码均已在vscode的汇编一键包即`xsro.masm-tasm`版本0.6.0扩展程序下测试通过
 
 这个屎仓库就别star了，来抱完代码顺路来看看无人问津的[女儿irori](https://github.com/voidf/bot_irori)吧（
 
