@@ -27,8 +27,9 @@ MAIN PROC FAR
 	while_true:
 		CMP ECX, 91 ; 两位精度（第二位权值为1e9）最大只能打到90位
 		JNC done 
-		CALL far ptr sum_two_mem
-
+		PUSH ECX
+		CALL far ptr fib
+		POP ECX
         PUSH EAX
         PUSH EBX
         PUSH ECX
@@ -62,7 +63,9 @@ MAIN PROC FAR
 		MOV DS:[12], ECX
 		POP ECX
 		SUB ECX, 1
+		PUSH ECX
 		CALL far ptr fib
+		POP ECX
 		CALL far ptr sum_two_mem
 		RET
 
@@ -70,7 +73,7 @@ MAIN PROC FAR
 			MOV ECX, 1
 			MOV DS:[0], ECX
 			MOV ECX, 0
-			MOV DS:[1], ECX
+			MOV DS:[4], ECX
 			RET
 
 	sum_two_mem:
