@@ -10,12 +10,12 @@ MAIN PROC FAR
 	while_true:
 		INC EAX
 		MOV EBX, 2
-		CMP EAX, 1000000
+		CMP EAX, 100000
 		JNC done
 		while_true_2:
 			CMP EBX, EAX ;<
 			JNC got_prime
-			CMP EBX,1001
+			CMP EBX, 314
 			JNC got_prime
 		div_try:
 			PUSH EAX
